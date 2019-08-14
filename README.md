@@ -1,5 +1,6 @@
 # Git_Workshop
-Git Workshop Material and Planning
+
+#Git Workshop Material and Planning
 
 #Event Format
 
