@@ -1,23 +1,65 @@
 # advanced-git
 
+## Set up your Repository
+
+[Download the starting files](https://github.com/WWCode-SV/Git_Workshop)<br/>
+
+![alt text](src/img/download.png "Download Files")<br/>
+
+Go to your personal Github and creat a new repository<br/>
+
+![alt text](src/img/new_repo.png "Create New Repo")<br/>
+
+Set up the repository:<br/>
+
+![alt text](src/img/new_repo2.png "Create New Repo")<br/>
+
+Clone file to your local file system
+
+```bash
+$ git clone https://github.com/<username>/<repo_name>
+$ cd <repo_name>
+```
+
+Save the downloaded file to your new repo<br/>
+
+Add and commit 
+```bash
+$ git add <file>
+$ git commit -m "Inital commit"
+$ git push
+```
+
+
 ## Rebase from remote
 
 Make a branch
 
-
 ```bash
-git branch feature-1
+git checkout -b feature-<branch>
 ```
-*lead commits something to develop*
-
 commit something <br/>
 commit something else<br/>
 commit a thrid thing <br/>
 
+Then switch to the original branch
+```bash 
+$ git checkout master
+$ git git pull
+```
+Create a new file and add / commit / push
 ```bash
+$ git add <file>
+$ git commit
+$ git push
+```
+
+Now checkout your branch to rebase
+```bash
+$ git checkout feature-<branch>
 $ git log --oneline
-$ git diff origin/develop
-$ git rebase origin/develop
+$ git diff origin/master
+$ git rebase origin/master
 $ git log --oneline
 ```
 *note the difference in your commit history*
@@ -178,10 +220,10 @@ Make additonal changes to the file
 
  
 ## Merge
-**Team Exercise**<br/>
-Checkout develop and create a new branch<br/>
+
+Checkout master and create a new branch<br/>
 ```bash
-	$ git checkout develop
+	$ git checkout master
 	$ git fetch
 	$ git checkout -b feature-<branch>
 ```
@@ -193,13 +235,15 @@ Add a new file, commit it, and push to the remote<br/>
 ```
 Create a PR for your new file additions in Github<br/>
 
-TODO: ADD SCREEN SHOT<br/>
+![alt text](src/img/pull_request.png "Create New Repo")<br/>
 
-Team reivews and merges Pull Requests<br/>
+Reivew and merges Pull Request<br/>
 
-Rebase local branch to get updates from develop branch<br/>
+![alt text](src/img/merge_pr.png "Create New Repo")<br/>
+
+Rebase local branch to get updates from master branch<br/>
 ```bash
-	$ git rebase origin/develop
+	$ git rebase origin/master
 	$ git log --oneline
 ```
 
@@ -290,18 +334,27 @@ Now we can rebase with the other branch
 ```
 
 
+## Tag
+Now that we are done with our work, we are ready to create a *Release*<br/>
+First, merge the most current changes into master and push to the remote
+```bash
+$ git checkout master
+$ git merge feature-<branch>
+$ git push 
+```
 
-## Tag 
+Next go to your Github account and Tag the Release
 
+![alt text](src/img/create_release.png "Create a Release")<br/>
 
-## Webhooks
+Now we can view the Tags in Github<br/>
+![alt text](src/img/tags.png "View Tags")
 
+Or review the tags in your terminal
+```bash
+$ git tag -l
+$ git checkout tags/<tag_name>
+```
 
-
-
-
-To view recently adding branches *might not need to use*
-$ git remote update
-$ git branch -r
 
 
