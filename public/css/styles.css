@@ -1,0 +1,13 @@
+/********** Base styles **********/
+* {
+  font-family: Verdana, sans-serif;
+}
+
+body{
+  background-color: #c8cdd1;
+  padding-top: 3.5rem;
+}
+
+#brand-color {
+  color: #a352ea;
+}
