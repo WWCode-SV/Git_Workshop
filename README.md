@@ -210,10 +210,13 @@ or you can use
 ```bash
 $ git stash apply stash@{#}
 ```
-instead of
+If you no longer need it, you can drop the stashed change
 ```bash
-$ git stash pop
+$ git stash drop stash@{#}
+$ git stash list
 ```
+>TIP: The *git stash pop* command is the same as *git stash apply && git stash drop*. If there is a conflict when using *pop*, your stash will not be dropped.
+
 
 ## Reset 
 **Reset a staged file**<br/>
