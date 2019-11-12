@@ -1,4 +1,4 @@
-# advanced-git
+# Git Workshop (Intermediate)
 
 ## Set up your Repository
 
