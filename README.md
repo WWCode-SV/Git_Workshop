@@ -4,15 +4,15 @@
   
 [Download the starting files](https://github.com/WWCode-SV/Git_Workshop)<br/>
 
-![alt text](git-img/download.png "Download Files")<br/>
+![alt text](src/img/download.png "Download Files")<br/>
 
 Go to your personal GitHub and create a new empty repository<br/>
 
-![alt text](git-img/new_repo.png "Create New Repo")<br/>
+![alt text](src/img/new_repo.png "Create New Repo")<br/>
 
 Set up the repository<br/>
 
-![alt text](git-img/new_repo2.png "Create New Repo")<br/>
+![alt text](src/img/new_repo2.png "Create New Repo")<br/>
 
 Clone your repository to your local file system
 
@@ -114,7 +114,7 @@ $ git rebase -i HEAD~3
 ```
 *looks at the last three commits*
 
-![alt text](git-img/rebase.png "Rebasing")<br/>
+![alt text](src/img/rebase.png "Rebasing")<br/>
 
 	pick #####  orange colorway 
 *move this line up or down*
@@ -299,11 +299,11 @@ Add a new file, commit it, and push to the remote<br/>
 ```
 Create a PR for your new file additions in Github<br/>
 
-![alt text](git-img/pull_request.png "Create New Repo")<br/>
+![alt text](src/img/pull_request.png "Create New Repo")<br/>
 
 Reivew and merges Pull Request<br/>
 
-![alt text](git-img/merge_pr.png "Create New Repo")<br/>
+![alt text](src/img/merge_pr.png "Create New Repo")<br/>
 
 Rebase local branch to get updates from master branch<br/>
 ```bash
@@ -409,10 +409,10 @@ $ git push
 
 Next go to your Github account and Tag the Release
 
-![alt text](git-img/create_release.png "Create a Release")<br/>
+![alt text](src/img/create_release.png "Create a Release")<br/>
 
 Now we can view the Tags in Github<br/>
-![alt text](git-img/tags.png "View Tags")
+![alt text](src/img/tags.png "View Tags")
 
 Or review the tags in your terminal
 ```bash
