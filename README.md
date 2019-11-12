@@ -39,7 +39,7 @@ $ git push
 git checkout -b summer-theme
 ```
 
-**make a small change to this branch ** <br/>
+**make a small change to this branch** <br/>
 *add styling to public/css/styles.css*
 ```bash 
 a {
