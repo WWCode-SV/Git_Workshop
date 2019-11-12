@@ -127,7 +127,7 @@ $ git rebase -i HEAD~2
 *allows you to temporarily 'stash' changes in order to perform another command*
 
 ```bash
-$ git fetch origin
+$ git rebase origin master
 ```
 
 	error: cannot rebase: You have unstaged changes.
@@ -138,7 +138,7 @@ $ git stash
 ```
 
 ```bash
-$ git fetch origin
+$ git rebase origin master
 ```
 *update files*
 
