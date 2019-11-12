@@ -36,7 +36,7 @@ $ git push
 Make a branch
 
 ```bash
-git checkout -b feature-<branch>
+$ git checkout -b feature-<branch>
 ```
 commit something <br/>
 commit something else<br/>
@@ -157,62 +157,62 @@ git log --oneline
 Make a change to your text file<br/>
 Check the status
 ```bash
-	$ git status
+$ git status
 ```
 
 View the Staging Index
 ```bash
-	$ git ls-files -s
+$ git ls-files -s
 ```
 >ls-files is a utility for inspecting the Staging Index. Adding -s or --stage flag gives us the SHA-1 hash
 
 Add your change file to Staging
 ```bash
-	$ git add <file>
+$ git add <file>
 ```
 Now view the Staging Index and note the change to your file
 ```bash
-	$ git ls-files -s
+$ git ls-files -s
 ```
 Unstage the file, and review the status
 ```bash
-	$ git reset HEAD <file>
-	$ git status 
+$ git reset HEAD <file>
+$ git status 
 ```
 > TIP: By default, *git reset* uses --mixed option. This will remove the changed file from staging, but NOT reset the changes. If you used the --hard option, you will reset your working copy to match the HEAD or HASH selected.
 
 **Hard Reset**<br/>
 Make a change to your text file and add it to staging<br/>
 ```bash
-	$ git add <file>
-	$ git status 
+$ git add <file>
+$ git status 
 ```
 Now reset the changes 
 ```bash
-	git reset HEAD --hard
+$ git reset HEAD --hard
 ```
 *Note that your changes are reset to the HEAD commit*
 
 **Reset a commit**<br/>
 Make a change to your text file. Then add and commit the file.
 ```bash
-	$ git add <file>
-	$ git commit
-	$ git log --oneline 
+$ git add <file>
+$ git commit
+$ git log --oneline 
 ```
 *Note in the log file that your recent commit is the HEAD* <br/>
 reset to the previous commit
 ```bash
-	$ git reset ##### <file>
-	$ git log --oneline 
+$ git reset ##### <file>
+$ git log --oneline 
 ```
 *Note the previous commit is now the HEAD*
 
 Make additonal changes to the file
 ```bash
-	$ git add <file>
-	$ git commit
-	$ git log --oneline 
+$ git add <file>
+$ git commit
+$ git log --oneline 
 ```
 *Note in the log file that your NEW commit is the HEAD* <br/>
 
@@ -223,15 +223,15 @@ Make additonal changes to the file
 
 Checkout master and create a new branch<br/>
 ```bash
-	$ git checkout master
-	$ git fetch
-	$ git checkout -b feature-<branch>
+$ git checkout master
+$ git fetch
+$ git checkout -b feature-<branch>
 ```
 Add a new file, commit it, and push to the remote<br/>
 ```bash
-	$ git add <file>
-	$ git commit
-	$ git push --set-upstream origin feature-<branch>
+$ git add <file>
+$ git commit
+$ git push --set-upstream origin feature-<branch>
 ```
 Create a PR for your new file additions in Github<br/>
 
@@ -243,8 +243,8 @@ Reivew and merges Pull Request<br/>
 
 Rebase local branch to get updates from master branch<br/>
 ```bash
-	$ git rebase origin/master
-	$ git log --oneline
+$ git rebase origin/master
+$ git log --oneline
 ```
 
 Choose people to make updates to the same files<br/>
@@ -252,9 +252,9 @@ Choose people to make updates to the same files<br/>
 Commits and push the file
 
 ```bash
-	$ git add <file>
-	$ git commit
-	$ git push
+$ git add <file>
+$ git commit
+$ git push
 ```
 Create a PR for your changes in Github<br/>
 
@@ -268,23 +268,23 @@ Continue with all files<br/>
 Add a "Bug" to your file<br/>
 Save and commit your changes<br/>
 ```bash
-	$ git add <file>
-	$ git commit
-	$ git push
+$ git add <file>
+$ git commit
+$ git push
 ```
 Make another, no conflicting change<br/>
 Save and commit your changes<br/>
 ```bash
-	$ git add <file>
-	$ git commit
-	$ git push
+$ git add <file>
+$ git commit
+$ git push
 ```
 Revert your bug <br/>
 ```bash
-	$ git log --oneline
-	$ git git revert ######
-	$ git log --oneline
-	$ git push
+$ git log --oneline
+$ git git revert ######
+$ git log --oneline
+$ git push
 ```
 Review the commit history in Github
 
@@ -292,45 +292,45 @@ Review the commit history in Github
 ## Cherry pick
 Create a new branch 
 ```bash
-	$ git branch feature-<branch>
+$ git branch feature-<branch>
 ```
 Make a change to one file, and add/commit it 
 ```bash
-	$ git add <file>
-	$ git commit 
+$ git add <file>
+$ git commit 
 ```
 Make a change to another file, and add/commit it
 ```bash
-	$ git add <file>
-	$ git commit 
+$ git add <file>
+$ git commit 
 ```
 Log the file to get the SHA-1 of the commit you want to cherry pick
 ```bash
-	$ git log --pretty=oneline
+$ git log --pretty=oneline
 ```
 Now such to your other branch and pick out the commit
 ```bash
-   $ git checkout feature-<branch>
-   $ git cherry-pick <SHA-1>
+$ git checkout feature-<branch>
+$ git cherry-pick <SHA-1>
 ```
 *Note your current branch contains online the change from the commit you picked* <br/>
 
 Commit your changes 
 ```bash
-	$ git commit 
+$ git commit 
 ```
 Now if we want, we can revert the unwanted commit <br/>
 Checkout the new branch, find the appropriate HASH, and revert the change
 ```bash
-	$ git checkout feature-<branch>
-	$ git log --oneline
-	$ git revert #####
-	$ git commit 
+$ git checkout feature-<branch>
+$ git log --oneline
+$ git revert #####
+$ git commit 
 ```
 *Note your unwanted commit has been reverted*<br/>
 Now we can rebase with the other branch 
 ```bash
-	$ git rebase <branch>
+$ git rebase <branch>
 ```
 
 
