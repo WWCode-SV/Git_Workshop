@@ -210,10 +210,13 @@ or you can use
 ```bash
 $ git stash apply stash@{#}
 ```
-instead of
+If you no longer need it, you can drop the stashed change
 ```bash
-$ git stash pop
+$ git stash drop stash@{#}
+$ git stash list
 ```
+>TIP: The *git stash pop* command is the same as *git stash apply && git stash drop*. If there is a conflict when using *pop*, your stash will not be dropped.
+
 
 ## Reset 
 **Reset a staged file**<br/>
@@ -299,11 +302,11 @@ $ git push --set-upstream origin feature-<branch>
 ```
 Create a PR for your new file additions in Github<br/>
 
-![alt text](src/img/pull_request.png "Create New Repo")<br/>
+![alt text](src/img/pull_request.png "Pull Request")<br/>
 
 Reivew and merges Pull Request<br/>
 
-![alt text](src/img/merge_pr.png "Create New Repo")<br/>
+![alt text](src/img/merge_pr.png "Merge PR")<br/>
 
 Rebase local branch to get updates from master branch<br/>
 ```bash
@@ -311,9 +314,9 @@ $ git rebase origin/master
 $ git log --oneline
 ```
 
-Choose people to make updates to the same files<br/>
+Make updates to the same files<br/>
 
-Commits and push the file
+Commit and push the file
 
 ```bash
 $ git add <file>
@@ -322,13 +325,12 @@ $ git push
 ```
 Create a PR for your changes in Github<br/>
 
-Team lead merges PRs, and resolves conflicts with the developers<br/>
+Merges PRs, and resolves conflicts<br/>
 
-Continue with all files<br/>
+
 
 
 ## Revert
-**Team Exercise**
 Add a "Bug" to your file<br/>
 Save and commit your changes<br/>
 ```bash
