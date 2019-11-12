@@ -114,7 +114,7 @@ $ git rebase -i HEAD~3
 ```
 *looks at the last three commits*
 
-![alt text](src/img/rebase.png "Rebasing")<br/>
+<!-- ![alt text](src/img/rebase.png "Rebasing")<br/> -->
 
 	pick #####  orange colorway 
 *move this line up or down*
